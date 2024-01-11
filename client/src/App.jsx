@@ -1,12 +1,15 @@
-import FileUpload from "./components/FileUpload";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ShowData from "./components/ShowData";
+import Content from "./Content";
 
 function App() {
   return (
-    <div className="container mt-5">
-      <h2 className="text-center fw-bold">آپلودر عکس</h2>
-
-      <FileUpload />
-    </div>
+    <BrowserRouter >
+      <Routes>
+        <Route path="/" element={<Content />} />
+        <Route path="/gallery" element={<ShowData />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
